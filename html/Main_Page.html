@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artists</title>
+    <link rel="stylesheet" href="/css/Main_page.css">
+    
+</head>
+<body>
+
+    <h1 align="center">Artists</h1>
+    <!-- Container for all artists -->
+    <div class="artist-container">   
+        {{range .}}
+        <div class="artist-card">
+            <a href="/artist?id={{.ID}}">
+                <img src="{{.Image}}" alt="{{.Name}}">
+                <h2>{{.Name}}</h2>
+            </a>
+        </div>
+        {{end}}
+    </div>
+</body>
+</html>
